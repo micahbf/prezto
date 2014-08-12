@@ -12,3 +12,22 @@ fi
 
 # Customize to your needs...
 
+autoload -Uz promptinit
+promptinit
+prompt micah
+
+source $HOME/.zsh-coupa
+
+export EDITOR='subl -w'
+export VISUAL=$EDITOR
+
+alias st="subl"
+alias stt="subl ."
+alias ls="ls -G"
+alias ll="ls -lh"
+alias la="ls -A"
+function git(){hub $@}
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+unsetopt CORRECT
+unsetopt noclobber
