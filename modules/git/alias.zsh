@@ -14,7 +14,7 @@
 zstyle -s ':prezto:module:git:log:medium' format '_git_log_medium_format' \
   || _git_log_medium_format='%C(bold)Commit:%C(reset) %C(green)%H%C(red)%d%n%C(bold)Author:%C(reset) %C(cyan)%an <%ae>%n%C(bold)Date:%C(reset)   %C(blue)%ai (%ar)%C(reset)%n%+B'
 zstyle -s ':prezto:module:git:log:oneline' format '_git_log_oneline_format' \
-  || _git_log_oneline_format='%C(green)%h%C(reset) %s%C(red)%d%C(reset)%n'
+  || _git_log_oneline_format='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 zstyle -s ':prezto:module:git:log:brief' format '_git_log_brief_format' \
   || _git_log_brief_format='%C(green)%h%C(reset) %s%n%C(blue)(%ar by %an)%C(red)%d%C(reset)%n'
 
@@ -89,9 +89,9 @@ alias ggv='git grep --invert-match'
 alias ggw='git grep --word-regexp'
 
 # Index (i)
-alias gia='git add'
-alias giA='git add --patch'
-alias giu='git add --update'
+alias ga='git add'
+alias gap='git add --patch'
+alias gau='git add --update'
 alias gid='git diff --no-ext-diff --cached'
 alias giD='git diff --no-ext-diff --cached --word-diff'
 alias gir='git reset'
@@ -142,19 +142,19 @@ alias gRp='git remote prune'
 alias gRs='git remote show'
 alias gRb='git-hub-browse'
 
-# Stash (s)
-alias gs='git stash'
-alias gsa='git stash apply'
-alias gsx='git stash drop'
-alias gsX='git-stash-clear-interactive'
-alias gsl='git stash list'
-alias gsL='git-stash-dropped'
-alias gsd='git stash show --patch --stat'
-alias gsp='git stash pop'
-alias gsr='git-stash-recover'
-alias gss='git stash save --include-untracked'
-alias gsS='git stash save --patch --no-keep-index'
-alias gsw='git stash save --include-untracked --keep-index'
+# Stash (st)
+alias gst='git stash'
+alias gsta='git stash apply'
+alias gstx='git stash drop'
+alias gstX='git-stash-clear-interactive'
+alias gstl='git stash list'
+alias gstL='git-stash-dropped'
+alias gstd='git stash show --patch --stat'
+alias gstp='git stash pop'
+alias gstr='git-stash-recover'
+alias gsts='git stash save --include-untracked'
+alias gstS='git stash save --patch --no-keep-index'
+alias gstw='git stash save --include-untracked --keep-index'
 
 # Submodule (S)
 alias gS='git submodule'
@@ -169,9 +169,9 @@ alias gSu='git submodule foreach git pull origin master'
 alias gSx='git-submodule-remove'
 
 # Working Copy (w)
-alias gws='git status --ignore-submodules=${_git_status_ignore_submodules} --short'
-alias gwS='git status --ignore-submodules=${_git_status_ignore_submodules}'
-alias gwd='git diff --no-ext-diff'
+alias gss='git status --ignore-submodules=${_git_status_ignore_submodules} --short'
+alias gsS='git status --ignore-submodules=${_git_status_ignore_submodules}'
+alias gd='git diff --no-ext-diff'
 alias gwD='git diff --no-ext-diff --word-diff'
 alias gwr='git reset --soft'
 alias gwR='git reset --hard'
