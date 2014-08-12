@@ -36,6 +36,7 @@ zstyle ':prezto:load' pmodule \
   'homebrew' \
   'rails' \
   'osx' \
+  'history-substring-search' \
   'prompt'
 
 #
